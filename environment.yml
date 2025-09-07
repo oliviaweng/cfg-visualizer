@@ -1,0 +1,11 @@
+name: cfg
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - click
+  - pydot
+  - networkx
+  - pip:
+    - r2pipe
