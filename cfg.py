@@ -72,7 +72,7 @@ def prettify_back_edges(pydot_cfg, back_edges):
     for b in back_edges:
         src = b[0]
         dst = b[1]
-        pydot_cfg.del_edge(f'"{src}"', f'"{dst}"')
+        pydot_cfg.del_edge(f'{src}', f'{dst}')
         compass_edge = pydot.Edge(f'"{src}":s',f'"{dst}":n')
         pydot_cfg.add_edge(compass_edge)
     return pydot_cfg
