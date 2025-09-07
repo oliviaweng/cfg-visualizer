@@ -1,0 +1,32 @@
+digraph code {
+	graph [bgcolor=azure fontsize=8 fontname="Courier" splines="ortho"];
+	node [fillcolor=gray style=filled shape=box];
+	edge [arrowhead="normal"];
+	"0x000011e9" [URL="fcn.11e9/0x000011e9", fillcolor="white",color="#767676", fontname="Courier",label="  ;-- baseline_int(unsigned long):\l  ; CALL XREF from fcn.12b3 @ 0x12f1\l202: fcn.11e9 ();\l; var int64_t var_28h @ rbp-0x28\l; var int64_t var_14h @ rbp-0x14\l; var int64_t var_10h @ rbp-0x10\l; var int64_t var_ch @ rbp-0xc\l; var int64_t var_8h @ rbp-0x8\l0x000011e9      endbr64                                                ; baseline_int(unsigned long)\l0x000011ed      push rbp\l0x000011ee      mov rbp, rsp\l0x000011f1      sub rsp, 0x30\l0x000011f5      mov qword [var_28h], rdi\l0x000011f9      mov rax, qword [var_28h]\l0x000011fd      movabs rdx, 0x1ffffffffffffffe                         ; 2305843009213693950\l0x00001207      cmp rax, rdx\l0x0000120a      ja 0x1225\l"]
+	"0x0000120c" [URL="fcn.11e9/0x0000120c", fillcolor="white",color="#767676", fontname="Courier",label="0x0000120c      shl rax, 2\l0x00001210      mov rdi, rax\l0x00001213      call sym.imp.operator_new___unsigned_long_\l0x00001218      mov qword [var_8h], rax\l0x0000121c      mov dword [var_14h], 0\l0x00001223      jmp 0x122a\l"]
+	"0x0000122a" [URL="fcn.11e9/0x0000122a", fillcolor="white",color="#767676", fontname="Courier",label="; CODE XREFS from baseline_int(unsigned long) @ 0x1223, 0x124f\l0x0000122a      mov eax, dword [var_14h]\l0x0000122d      cmp qword [var_28h], rax\l0x00001231      jbe 0x1251\l"]
+	"0x00001233" [URL="fcn.11e9/0x00001233", fillcolor="white",color="#767676", fontname="Courier",label="0x00001233      mov eax, dword [var_14h]\l0x00001236      lea rdx, [rax*4]\l0x0000123e      mov rax, qword [var_8h]\l0x00001242      add rax, rdx\l0x00001245      mov dword [rax], 0\l0x0000124b      add dword [var_14h], 1\l0x0000124f      jmp 0x122a\l"]
+	"0x00001251" [URL="fcn.11e9/0x00001251", fillcolor="white",color="#767676", fontname="Courier",label="0x00001251      mov dword [var_10h], 0\l"]
+	"0x00001258" [URL="fcn.11e9/0x00001258", fillcolor="white",color="#767676", fontname="Courier",label="; CODE XREF from baseline_int(unsigned long) @ 0x12ab\l0x00001258      cmp dword [var_10h], 2\l0x0000125c      ja 0x12ad\l"]
+	"0x0000125e" [URL="fcn.11e9/0x0000125e", fillcolor="white",color="#767676", fontname="Courier",label="0x0000125e      mov dword [var_ch], 0\l"]
+	"0x00001265" [URL="fcn.11e9/0x00001265", fillcolor="white",color="#767676", fontname="Courier",label="; CODE XREF from baseline_int(unsigned long) @ 0x12a5\l0x00001265      mov eax, dword [var_ch]\l0x00001268      cmp qword [var_28h], rax\l0x0000126c      jbe 0x12a7\l"]
+	"0x0000126e" [URL="fcn.11e9/0x0000126e", fillcolor="white",color="#767676", fontname="Courier",label="0x0000126e      mov eax, dword [var_ch]\l0x00001271      lea rdx, [rax*4]\l0x00001279      mov rax, qword [var_8h]\l0x0000127d      add rax, rdx\l0x00001280      mov ecx, dword [rax]\l0x00001282      mov eax, dword [var_ch]\l0x00001285      imul eax, dword [var_10h]\l0x00001289      mov edx, eax\l0x0000128b      mov eax, dword [var_ch]\l0x0000128e      lea rsi, [rax*4]\l0x00001296      mov rax, qword [var_8h]\l0x0000129a      add rax, rsi\l0x0000129d      add edx, ecx\l0x0000129f      mov dword [rax], edx\l0x000012a1      add dword [var_ch], 1\l0x000012a5      jmp 0x1265\l"]
+	"0x000012a7" [URL="fcn.11e9/0x000012a7", fillcolor="white",color="#767676", fontname="Courier",label="0x000012a7      add dword [var_10h], 1\l0x000012ab      jmp 0x1258\l"]
+	"0x000012ad" [URL="fcn.11e9/0x000012ad", fillcolor="white",color="#767676", fontname="Courier",label="0x000012ad      mov rax, qword [var_8h]\l0x000012b1      leave\l0x000012b2      ret\l"]
+	"0x00001225" [URL="fcn.11e9/0x00001225", fillcolor="white",color="#767676", fontname="Courier",label="0x00001225      call sym.imp.__cxa_throw_bad_array_new_length\l"]
+        "0x000011e9" -> "0x00001225" [color="#13a10e"];
+        "0x000011e9" -> "0x0000120c" [color="#c50f1f"];
+        "0x0000120c" -> "0x0000122a" [color="#3a96dd"];
+        "0x0000122a" -> "0x00001251" [color="#13a10e"];
+        "0x0000122a" -> "0x00001233" [color="#c50f1f"];
+        "0x00001233" -> "0x0000122a" [color="#3a96dd"];
+        "0x00001251" -> "0x00001258" [color="#3a96dd"];
+        "0x00001258" -> "0x000012ad" [color="#13a10e"];
+        "0x00001258" -> "0x0000125e" [color="#c50f1f"];
+        "0x0000125e" -> "0x00001265" [color="#3a96dd"];
+        "0x00001265" -> "0x000012a7" [color="#13a10e"];
+        "0x00001265" -> "0x0000126e" [color="#c50f1f"];
+        "0x0000126e" -> "0x00001265" [color="#3a96dd"];
+        "0x000012a7" -> "0x00001258" [color="#3a96dd"];
+        "0x00001225" -> "0x0000122a" [color="#3a96dd"];
+}

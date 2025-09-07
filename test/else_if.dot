@@ -1,0 +1,46 @@
+digraph "code" {
+clusterrank=global;
+nodesep=2;
+node [fillcolor=gray, shape=box, style=filled];
+"0x0000116f" [URL="fcn.1149/0x0000116f", color="#767676", fillcolor="white", fontname="Courier", label="; CODE XREF from fcn.1149 @ 0x118c\l      cmpl $9, var_4h\l      jg 0x11b3\l"];
+edge [arrowhead="normal"];
+"0x00001175" [URL="fcn.1149/0x00001175", color="#767676", fillcolor="white", fontname="Courier", label="      movl var_4h, %eax\l      addl %eax, var_ch\l      cmpl $0, var_14h\l      jle 0x1188\l"];
+"0x00001149" [URL="fcn.1149/0x00001149", color="#767676", fillcolor="white", fontname="Courier", label="  ;-- foo:\l  ; CALL XREF from fcn.1129 @ 0x1141\l116: fcn.1149 ();\l; var int64_t var_14h @ rbp-0x14\l; var int64_t var_ch @ rbp-0xc\l; var int64_t var_8h @ rbp-0x8\l; var int64_t var_4h @ rbp-0x4\l      endbr64\l      pushq %rbp\l      movq %rsp, %rbp\l      movl %edi, var_14h\l      movl $0, var_ch\l      movl $0, var_8h\l      cmpl $0, var_14h\l      jle 0x118e\l"];
+"0x00001181" [URL="fcn.1149/0x00001181", color="#767676", fillcolor="white", fontname="Courier", label="      movl $4, var_8h\l"];
+"0x00001168" [URL="fcn.1149/0x00001168", color="#767676", fillcolor="white", fontname="Courier", label="      movl $0, var_4h\l"];
+"0x00001188" [URL="fcn.1149/0x00001188", color="#767676", fillcolor="white", fontname="Courier", label="      addl $1, var_4h\l      jmp 0x116f\l"];
+"0x000011b3" [URL="fcn.1149/0x000011b3", color="#767676", fillcolor="white", fontname="Courier", label="; CODE XREFS from fcn.1149 @ 0x119b, 0x11aa\l      movl var_8h, %edx\l      movl var_ch, %eax\l      addl %edx, %eax\l      popq %rbp\l      retq\l"];
+"0x0000118e" [URL="fcn.1149/0x0000118e", color="#767676", fillcolor="white", fontname="Courier", label="      cmpl $4, var_14h\l      jle 0x119d\l"];
+"0x00001194" [URL="fcn.1149/0x00001194", color="#767676", fillcolor="white", fontname="Courier", label="      movl $4, var_8h\l      jmp 0x11b3\l"];
+"0x0000119d" [URL="fcn.1149/0x0000119d", color="#767676", fillcolor="white", fontname="Courier", label="      cmpl $8, var_14h\l      jle 0x11ac\l"];
+"0x000011a3" [URL="fcn.1149/0x000011a3", color="#767676", fillcolor="white", fontname="Courier", label="      movl $6, var_8h\l      jmp 0x11b3\l"];
+"0x000011ac" [URL="fcn.1149/0x000011ac", color="#767676", fillcolor="white", fontname="Courier", label="      movl $2, var_8h\l"];
+"0x00001149" -> "0x0000118e"  [color="#13a10e", key=0];
+"0x00001149" -> "0x00001168"  [color="#c50f1f", key=0];
+"0x00001168" -> "0x0000116f"  [color="#3a96dd", key=0];
+"0x0000116f" -> "0x000011b3"  [color="#13a10e", key=0];
+"0x0000116f" -> "0x00001175"  [color="#c50f1f", key=0];
+"0x00001175" -> "0x00001188"  [color="#13a10e", key=0];
+"0x00001175" -> "0x00001181"  [color="#c50f1f", key=0];
+"0x00001181" -> "0x00001188"  [color="#3a96dd", key=0];
+"0x0000118e" -> "0x0000119d"  [color="#13a10e", key=0];
+"0x0000118e" -> "0x00001194"  [color="#c50f1f", key=0];
+"0x00001194" -> "0x000011b3"  [color="#3a96dd", key=0];
+"0x0000119d" -> "0x000011ac"  [color="#13a10e", key=0];
+"0x0000119d" -> "0x000011a3"  [color="#c50f1f", key=0];
+"0x000011a3" -> "0x000011b3"  [color="#3a96dd", key=0];
+"0x000011ac" -> "0x000011b3"  [color="#3a96dd", key=0];
+"0x00001188":s -> "0x0000116f":n;
+subgraph cluster_loop0 {
+"0x0000116f" [URL="fcn.1149/0x0000116f", color="#767676", fillcolor="white", fontname="Courier", label="; CODE XREF from fcn.1149 @ 0x118c\l      cmpl $9, var_4h\l      jg 0x11b3\l"];
+"0x00001175" [URL="fcn.1149/0x00001175", color="#767676", fillcolor="white", fontname="Courier", label="      movl var_4h, %eax\l      addl %eax, var_ch\l      cmpl $0, var_14h\l      jle 0x1188\l"];
+"0x00001181" [URL="fcn.1149/0x00001181", color="#767676", fillcolor="white", fontname="Courier", label="      movl $4, var_8h\l"];
+"0x00001188" [URL="fcn.1149/0x00001188", color="#767676", fillcolor="white", fontname="Courier", label="      addl $1, var_4h\l      jmp 0x116f\l"];
+}
+
+subgraph last {
+    "0x000011b3" [URL="fcn.1149/0x000011b3", color="#767676", fillcolor="white", fontname="Courier", label="; CODE XREFS from fcn.1149 @ 0x119b, 0x11aa\l      movl var_8h, %edx\l      movl var_ch, %eax\l      addl %edx, %eax\l      popq %rbp\l      retq\l"];
+    rank = max;
+}
+
+}
